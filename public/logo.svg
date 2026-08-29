@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background subtle radial glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ring Swoosh Gradient -->
+    <linearGradient id="ringGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="35%" stop-color="#2563EB"/>
+      <stop offset="70%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+
+    <!-- Trail Gradient -->
+    <linearGradient id="trailGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <!-- Airplane Gradient -->
+    <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="planeDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+
+    <!-- Robot Head Gradient -->
+    <linearGradient id="robotHeadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <!-- Visor Gradient -->
+    <linearGradient id="visorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Eye Glow -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shield Gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+
+    <!-- AI Badge Gradient -->
+    <linearGradient id="aiBadgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#D946EF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Base Glow -->
+  <circle cx="250" cy="230" r="190" fill="url(#bgGlow)"/>
+
+  <!-- Outer Orbit Ring Swoosh -->
+  <path d="M 120,330 A 175,175 0 1,1 410,200" fill="none" stroke="url(#ringGradient)" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Motion lines / trail for plane -->
+  <path d="M 270,270 C 320,250 380,200 425,125" fill="none" stroke="url(#trailGradient)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Code symbol top left </ > -->
+  <g transform="translate(150, 105)">
+    <!-- < -->
+    <path d="M 18,12 L 6,24 L 18,36" fill="none" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- / -->
+    <path d="M 32,8 L 22,40" fill="none" stroke="#818CF8" stroke-width="4" stroke-linecap="round"/>
+    <!-- > -->
+    <path d="M 36,12 L 48,24 L 36,36" fill="none" stroke="#60A5FA" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Mini code lines beside </ > -->
+  <rect x="220" y="115" width="45" height="4.5" rx="2.25" fill="#93C5FD" opacity="0.7"/>
+  <rect x="220" y="127" width="30" height="4.5" rx="2.25" fill="#C4B5FD" opacity="0.6"/>
+  <rect x="130" y="155" width="22" height="4" rx="2" fill="#94A3B8" opacity="0.6"/>
+  <rect x="130" y="167" width="14" height="4" rx="2" fill="#94A3B8" opacity="0.4"/>
+
+  <!-- Paper Airplane Launching Up-Right -->
+  <g transform="translate(365, 80) rotate(5)">
+    <!-- Main Left Wing -->
+    <polygon points="0,40 85,0 35,65" fill="url(#planeGrad)"/>
+    <!-- Right Wing -->
+    <polygon points="35,65 85,0 75,60" fill="url(#planeDark)"/>
+    <!-- Fold Center -->
+    <polygon points="35,65 85,0 48,52" fill="#2563EB"/>
+  </g>
+
+  <!-- Side Feature Badges (Right Side) -->
+  <!-- 1. TEST Badge (Green) -->
+  <g transform="translate(360, 185)">
+    <circle cx="16" cy="16" r="16" fill="#22C55E"/>
+    <path d="M 10,16 L 14,20 L 22,12" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 2. ANALYZE Badge (Blue) -->
+  <g transform="translate(360, 235)">
+    <circle cx="16" cy="16" r="16" fill="#3B82F6"/>
+    <!-- Bug Icon -->
+    <circle cx="16" cy="16" r="6" fill="#FFFFFF"/>
+    <circle cx="16" cy="11" r="3.5" fill="#FFFFFF"/>
+    <path d="M 10,14 L 6,12 M 22,14 L 26,12 M 10,18 L 6,18 M 22,18 L 26,18 M 11,22 L 7,25 M 21,22 L 25,25" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- 3. IMPROVE Badge (Purple) -->
+  <g transform="translate(360, 285)">
+    <circle cx="16" cy="16" r="16" fill="#A855F7"/>
+    <!-- Search / Sparkle Icon -->
+    <circle cx="14" cy="14" r="6" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+    <path d="M 19,19 L 24,24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ROBOT PILOT FIGURE -->
+  <!-- Body/Shoulders -->
+  <path d="M 175,340 C 175,290 220,265 250,265 C 280,265 325,290 325,340 Z" fill="#1E293B"/>
+  <path d="M 180,340 C 180,295 220,275 250,275 C 280,275 320,295 320,340 Z" fill="#0F172A"/>
+
+  <!-- Blue Armor Collar Rim -->
+  <path d="M 195,305 C 220,325 280,325 305,305 L 315,340 C 275,360 225,360 185,340 Z" fill="#1E40AF"/>
+
+  <!-- Robot Head Outer Shield Helmet -->
+  <ellipse cx="250" cy="225" rx="72" ry="68" fill="url(#robotHeadGrad)" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.3))"/>
+
+  <!-- Antenna -->
+  <rect x="247" y="145" width="6" height="20" rx="3" fill="#94A3B8"/>
+  <circle cx="250" cy="143" r="7" fill="#38BDF8"/>
+  <circle cx="250" cy="143" r="3" fill="#FFFFFF"/>
+
+  <!-- Ear Caps -->
+  <rect x="170" y="210" width="10" height="30" rx="5" fill="#38BDF8"/>
+  <rect x="320" y="210" width="10" height="30" rx="5" fill="#38BDF8"/>
+
+  <!-- Visor Screen -->
+  <rect x="188" y="185" width="124" height="74" rx="28" fill="url(#visorGrad)"/>
+  <rect x="190" y="187" width="120" height="70" rx="26" fill="none" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Smiling Cyan Eyes (Arc) -->
+  <g filter="url(#cyanGlow)">
+    <!-- Left Eye -->
+    <path d="M 215,225 Q 228,212 241,225" fill="none" stroke="#22D3EE" stroke-width="5" stroke-linecap="round"/>
+    <!-- Right Eye -->
+    <path d="M 259,225 Q 272,212 285,225" fill="none" stroke="#22D3EE" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Chest Shield Emblem -->
+  <g transform="translate(225, 290)">
+    <!-- Shield Shape -->
+    <path d="M 25,0 L 48,12 C 48,36 32,58 25,65 C 18,58 2,36 2,12 Z" fill="url(#shieldGrad)" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.4))"/>
+    <path d="M 25,3 L 45,14 C 45,34 31,54 25,60 C 19,54 5,34 5,14 Z" fill="none" stroke="#93C5FD" stroke-width="1.5" opacity="0.6"/>
+    <!-- Shield Checkmark -->
+    <path d="M 16,28 L 22,35 L 34,20" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
