@@ -1,0 +1,6 @@
+{
+  "name": "TestPilot AI",
+  "description": "AI-Powered Software Testing & Quality Engineering Platform for Java, Spring Boot, and REST APIs",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
